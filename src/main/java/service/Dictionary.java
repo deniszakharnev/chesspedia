@@ -34,6 +34,8 @@ public class Dictionary {
 
         player.setCountry(country.get());
         dictionary.createPlayer(player);
+
+        log.info("Player created: {}", player);
     }
 
     public Optional<Player> findPlayerById(Long playerId) {

@@ -37,7 +37,7 @@ public class DictionaryController {
     public ResponseEntity<?> findCountryByShortName(@PathVariable("shortname") String shortName) {
         Optional<Country> country = dictionary.findCountryByShortName(shortName);
         if (country.isPresent()) {
-            return new ResponseEntity<>(country.get(), HttpStatus.OK);
+            return ResponseEntity.ok(country.get());
         } else {
             return new ResponseEntity<>("Can't find country " + shortName, HttpStatus.BAD_REQUEST);
         }
@@ -61,7 +61,7 @@ public class DictionaryController {
     public ResponseEntity<?> findPlayerById(@PathVariable("playerId") Long playerId) {
         Optional<Player> player = dictionary.findPlayerById(playerId);
         if (player.isPresent()) {
-            return new ResponseEntity<>(player.get(), HttpStatus.OK);
+            return ResponseEntity.ok(player.get());
         } else {
             return new ResponseEntity<>("Can't find player by id " + playerId, HttpStatus.BAD_REQUEST);
         }
