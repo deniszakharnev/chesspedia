@@ -14,6 +14,4 @@ public class Tournament {
     private Date startDate;
     @Getter
     private List<Player> players;
-    @Getter
-    private List<Game> games;
 }
