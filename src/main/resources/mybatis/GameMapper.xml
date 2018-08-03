@@ -3,7 +3,13 @@
 <mapper namespace="mybatis.GameMapper">
     <resultMap id="countryResult" type="domain.GameRecords">
         <id column="id" property="id"/>
+        <result column="type" property="type"/>
         <result column="name" property="name"/>
-        <result column="type" property="shortName"/>
+    </resultMap>
+    <resultMap id="moveResult" type="domain.Move">
+        <id column="color" property="color"/>
+        <result column="piece" property="piece"/>
+        <result column="moveFrom" property="moveFrom"/>
+        <result column="moveTo" property="moveTo"/>
     </resultMap>
 </mapper>

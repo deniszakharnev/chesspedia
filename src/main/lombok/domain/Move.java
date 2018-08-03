@@ -1,10 +1,11 @@
 package domain;
 
-import lombok.Value;
+import lombok.Data;
 
-@Value
+@Data
 public class Move {
     private Color color;
     private Piece piece;
-    private String movesTo;
+    private String moveFrom;
+    private String moveTo;
 }

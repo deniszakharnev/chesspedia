@@ -21,10 +21,13 @@ CREATE TABLE game (
 );
 
 CREATE TABLE gamemove (
-  ordernum INT         NOT NULL,
   game_id  INT         NOT NULL,
-  move     VARCHAR(10) NOT NULL,
-  PRIMARY KEY (game_id, ordernum)
+  ordernum INT         NOT NULL,
+  color    VARCHAR(10)  NOT NULL,
+  piece    VARCHAR(10) NOT NULL,
+  moveFrom VARCHAR(2)  NOT NULL,
+  moveTo   VARCHAR(2)  NOT NULL,
+  PRIMARY KEY (game_id, ordernum, color)
 );
 
 ALTER TABLE gamemove ADD FOREIGN KEY (game_id) REFERENCES game (id);
