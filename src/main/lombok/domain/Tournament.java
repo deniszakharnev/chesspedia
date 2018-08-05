@@ -1,17 +1,15 @@
 package domain;
 
+import lombok.Data;
 import lombok.Getter;
 
 import java.util.Date;
 import java.util.List;
 
+@Data
 public class Tournament {
-    @Getter
-    private String id;
-    @Getter
+    private Long id;
     private String name;
-    @Getter
     private Date startDate;
-    @Getter
     private List<Player> players;
 }

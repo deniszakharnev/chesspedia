@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mybatis.TournamentMapper">
+    <resultMap id="tournamentResult" type="domain.Tournament">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+    </resultMap>
+    <resultMap id="tournamentGameResult" type="domain.TournamentGameRecords">
+        <id column="game_id" property="id"/>
+        <association property="player1" javaType="domain.Player">
+            <id column="player1_id" property="id"/>
+            <result column="player1_name" property="name"/>
+        </association>
+        <association property="player2" javaType="domain.Player">
+            <id column="player2_id" property="id"/>
+            <result column="player2_name" property="name"/>
+        </association>
+    </resultMap>
+</mapper>
