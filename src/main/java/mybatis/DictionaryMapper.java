@@ -7,7 +7,15 @@ import org.apache.ibatis.annotations.*;
 @Mapper
 public interface DictionaryMapper {
 
-    String SELECT_PLAYER_BY_ID = "SELECT p.*, c.name country_name, c.short_name FROM Player p INNER JOIN Country c ON p.country_id=c.id WHERE p.id = #{playerId}";
+    String SELECT_PLAYER_BY_ID =
+            "SELECT p.id player_id" +
+                    ", p.name player_name" +
+                    ", c.id country_id" +
+                    ", c.name country_name" +
+                    ", c.short_name short_country_name " +
+                    "FROM Player p INNER JOIN Country c ON p.country_id=c.id " +
+                    "WHERE p.id = #{playerId}";
+
     String SELECT_COUNTRY_BY_SHORTNAME = "SELECT * FROM Country WHERE short_name = #{name}";
     String INSERT_COUNTRY = "INSERT INTO Country (name, short_name) VALUES (#{name}, #{shortName})";
     String INSERT_PLAYER = "INSERT INTO Player (name, country_id) VALUES (#{name}, #{country.id})";

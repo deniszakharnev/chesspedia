@@ -21,8 +21,8 @@ public class ToutnamentController {
         return ResponseEntity.ok(tournamentService.getTournaments());
     }
 
-    @RequestMapping(value = "/tournament/{gameId}", method = RequestMethod.GET)
-    public ResponseEntity<?> loadTournamentGameRecords(@PathVariable("gameId") Long gameId) {
-        return ResponseEntity.ok(tournamentService.getTournamentGameRecords(gameId));
+    @RequestMapping(value = "/tournament/{tournamentId}/game/{gameId}", method = RequestMethod.GET)
+    public ResponseEntity<?> loadTournamentGameRecords(@PathVariable("tournamentId") Long tournamentId, @PathVariable("gameId") Long gameId) {
+        return ResponseEntity.ok(tournamentService.getTournamentGameRecords(tournamentId, gameId));
     }
 }

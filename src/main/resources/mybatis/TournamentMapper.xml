@@ -7,13 +7,7 @@
     </resultMap>
     <resultMap id="tournamentGameResult" type="domain.TournamentGameRecords">
         <id column="game_id" property="id"/>
-        <association property="player1" javaType="domain.Player">
-            <id column="player1_id" property="id"/>
-            <result column="player1_name" property="name"/>
-        </association>
-        <association property="player2" javaType="domain.Player">
-            <id column="player2_id" property="id"/>
-            <result column="player2_name" property="name"/>
-        </association>
+        <association property="player1" javaType="domain.Player" resultMap="mybatis.DictionaryMapper.playerResult" columnPrefix="p1_"/>
+        <association property="player2" javaType="domain.Player" resultMap="mybatis.DictionaryMapper.playerResult" columnPrefix="p2_"/>
     </resultMap>
 </mapper>

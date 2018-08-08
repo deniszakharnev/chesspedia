@@ -22,8 +22,8 @@ public class TournamentService {
     public List<Tournament> getTournaments() {
         List<Tournament> tournaments = tournamentMapper.getTournaments();
         tournaments.stream().forEach(t ->
-                        t.setPlayers(loadPlayers(t.getId())
-                        )
+                t.setPlayers(loadPlayers(t.getId())
+                )
         );
         return tournaments;
     }
@@ -32,8 +32,8 @@ public class TournamentService {
         return tournamentMapper.getTournamentPlayers(tournamentId);
     }
 
-    public TournamentGameRecords getTournamentGameRecords(Long gameId) {
-        TournamentGameRecords gameRecords = tournamentMapper.getTournamentGameRecords(gameId);
+    public TournamentGameRecords getTournamentGameRecords(Long tournamentId, Long gameId) {
+        TournamentGameRecords gameRecords = tournamentMapper.getTournamentGameRecords(tournamentId, gameId);
 
         gameRecords.setMoves(gameMapper.loadGameMoves(gameId));
 
