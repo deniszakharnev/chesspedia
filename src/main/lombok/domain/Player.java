@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class Player {
-    private String id;
+    private Long id;
     private String name;
     private Country country;
 }
