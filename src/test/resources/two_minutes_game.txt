@@ -1,0 +1,10 @@
+1. c2-c4, e7-e5.
+2. e2-e4, Nb8-c6.
+3. Ng1-f3, Nc6-d4.
+4. g2-g3, Qd8-f6.
+5. Bf1-g2, b7-b6.
+6. 0-0, Bc8-b7.
+7. Qd1-e1, Nd4xf3+.
+8. Bg2xf3, Qf6xf3.
+9. Qe1-e3, Bb7xe4.
+10. Nb1-c3, Qf3-g2 mate.

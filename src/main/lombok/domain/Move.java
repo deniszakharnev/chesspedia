@@ -8,4 +8,5 @@ public class Move {
     private Piece piece;
     private String moveFrom;
     private String moveTo;
+    private boolean capture;
 }

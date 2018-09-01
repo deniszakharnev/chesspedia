@@ -5,7 +5,7 @@ public enum Piece {
     QUEEN("Q"),
     ROOK("R"),
     BISHOP("B"),
-    KNIGHT("K"),
+    KNIGHT("N"),
     PAWN("");
 
     private final String shortName;
@@ -14,7 +14,7 @@ public enum Piece {
         this.shortName = shortName;
     }
 
-    static Piece byShortName(String shortName) {
+    public static Piece byShortName(String shortName) {
         for (Piece piece : Piece.values()) {
             if (piece.shortName.equals(shortName)) {
                 return piece;
