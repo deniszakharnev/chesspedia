@@ -9,4 +9,6 @@ public class Move {
     private String moveFrom;
     private String moveTo;
     private boolean capture;
+    private boolean check;
+    private boolean mate;
 }

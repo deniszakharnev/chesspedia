@@ -45,6 +45,14 @@ public class MyChessGameListener implements ChessGameListener {
             if ("x".equalsIgnoreCase(moveCtx.MoveType().getText())) {
                 move.setCapture(true);
             }
+
+            if (moveCtx.Check() != null) {
+                move.setCheck(true);
+            }
+
+            if (moveCtx.Mate() != null) {
+                move.setMate(true);
+            }
         }
         return move;
     }
